@@ -11,4 +11,6 @@
 #ifndef SMARTCALC_H
 #define SMARTCALC_H
 
+#include "./modules/include/parcer.h"
+
 #endif  // SMARTCALC_H
