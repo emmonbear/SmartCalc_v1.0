@@ -1,0 +1,25 @@
+name: Tests 
+on:
+  push:
+
+jobs:
+  clang:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        workdir-directory: src
+      steps:
+        - uses: actions/checkout@v3
+        - name: install dependencies
+          run : sudo apt-get install clang-format -y
+        - name: clang-format
+          run: make clang_check
+  library:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        workdir-directory: src
+      steps:
+        - uses: actions/checkout@v3
+        - name: smartcalc.a
+          run: make smartcalc.a
